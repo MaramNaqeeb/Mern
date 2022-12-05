@@ -34,7 +34,7 @@ class Ninja{
 
 class Sensi extends Ninja{
     constructor (wisdom,health,speed,strength){
-        super("Ahmad",200,10,10);
+        super("Ahmad",health,speed,strength);
         this.health=200;
         this.speed=10;
         this.strength=10;
