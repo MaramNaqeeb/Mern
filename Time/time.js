@@ -13,13 +13,13 @@ class Unit extends Card{
     }
 
     attack(target){
-          if( target instanceof Unit ) {
-          target.res-=this.power;
+            if( target instanceof Unit ) {
+            target.res-=this.power;
         console.log(target.name+" is attacked by "+"Red Belt"+" so its resilience now is "+target.res+" after decreaseing the power which is "+this.power);
     
  } else {
-            throw new Error( "Target must be a unit!" );
-        }
+        throw new Error( "Target must be a unit!" );
+        }
 }   
 
 }
@@ -34,12 +34,12 @@ class Effect extends Card{
     }
 
     play( target ) {
-            if( target instanceof Unit ) {
+            if( target instanceof Unit ) {
            
-            console.log(this.text+" "+target.name+" "+this.stat+" by "+this.magnitude);
-            } else {
-                throw new Error( "Target must be a unit!" );
-            }
+            console.log(this.text+" "+target.name+" "+this.stat+" by "+this.magnitude);
+            } else {
+            throw new Error( "Target must be a unit!" );
+            }
         }
         
 }
