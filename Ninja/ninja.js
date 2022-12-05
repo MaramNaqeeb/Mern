@@ -13,8 +13,8 @@ class Ninja{
     showStats(){
         this.name="Hyabusa";
         this.health=5;
-        this.speed=10;
-        this.strength=10;
+        this.speed=this.speed;
+        this.strength=this.strength;
 
         return this;
     }
