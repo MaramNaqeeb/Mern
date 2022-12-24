@@ -18,18 +18,6 @@ const Form= (props) => {
 
     }
 
-    const nameValidation=(e)=>{
-        if(e.target.value.length<2){
-            setHasErrors4("password must be at least 8 characters");
-            setName(""); 
-        
-        }else{
-           
-            setName(e.target.value);
-            <input type="submit"/>
-            setHasErrors4("");
-        }
-    }
     <Form onSubmitProp={props.creatPlayer}  initialName="" initialPosition=""/>
 
     return (
@@ -37,14 +25,13 @@ const Form= (props) => {
               {props.errors.map((err, index) => <p key={index}>{err}</p>)}
             <p>
                 <label> Player Name</label><br/>
-                <input type="text" onChange={nameValidation} />
-            setHasErrors4("password must be at least 8 characters");
-                <p>({hasErrors4}   </p>
+                <input type="text" onChange={(e)=>setName(e.target.value)} value={name}/>
             </p>
             <p>
                 <label> Preffered Position</label><br/>
                 <input type="text" onChange={(e)=>setPosition(e.target.value)} value={position}/>
             </p>
+            <input type="submit"/>
 
 
         </form>
